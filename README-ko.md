@@ -1,48 +1,48 @@
-# Uncover insights from Facebook with PixieDust and a cognitive Jupyter notebook
+# PixieDust와 Jupyter Notebook를 활용하여 페이스북에서 인사이트 찾아내기
 
-In this developer journey, we will use a Jupyter notebook to glean insights from a vast body of unstructured data. Credit goes to [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957) and [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336) for providing the initial notebook design.
+이 개발자 과정에서는 Jupyter 노트북을 사용하여 방대한 양의 구조화되지 않은 데이터에서 통찰력을 수집합니다. 초기 노트북 디자인을 제공해 준 [Anna Quincy](https://www.linkedin.com/in/anna-quincy-25042957)과 [Tyler Andersen](https://www.linkedin.com/in/tyler-andersen-2bb82336)에게 감사의 말씀을 전합니다.
 
-We'll start with data exported from Facebook Analytics. We'll enrich the data with Watson’s Natural Language Understanding (NLU), Tone Analyzer and Visual Recognition.
+Facebook Analytics에서 내 보낸 데이터로 시작하여, Natural Language Understanding (NLU), Tone Analyzer, Visual Recognition 의 왓슨 API로 데이터를 풍부하게 만듭니다. 
 
-We'll use the enriched data to answer questions like:
+다음과 같은 질문에 대답하기 위해 이 데이터를 사용합니다 :
 
-> What sentiment is most prevalent in the posts with the highest engagement performance?
+> 글에 표현된 가장 보편적인 감정/감성 상태는 무엇이고, 참여도가 가장 높은 게시물은 무엇인지?
 
-> What are the relationships between social tone of article text, the main article entity, and engagement performance?
+> 글에 표현된 어조, 언급된 주요 대상, 참여 호응도 간의 관계는 무엇입니까?
 
-These types of insights are especially beneficial for marketing analysts who are interested in understanding and improving brand perception, product performance, customer satisfaction, and ways to engage their audiences.
+이러한 유형의 통찰력은 브랜드 인지도, 제품 성능, 고객 만족도 및 고객 참여도를 이해하고 향상시키는 데 관심이있는 마케팅 분석가에게 유용합니다. 
 
-It is important to note that this journey is meant to be used as a guided experiment, rather than an application with one set output. The standard Facebook Analytics export features text from posts, articles, and thumbnails, along with standard Facebook performance metrics such as likes, shares, and impressions. This unstructured content was then enriched with Watson APIs to extract keywords, entities, sentiment, and tone.
+이 개발자 과정은 한 세트의 결과를 내는 응용 프로그램이 아니라 여러 실험을 안내하기 위한 용도로 작성 되었습니다. 표준 Facebook Analytics 내보내기에는 좋아요(likes), 공유(shares) 및 노출(impression)과 같은 표준 Facebook 성능 측정 항목과 함께, 내가 쓴 글, 기사 및 썸네일로 부터 텍스트를 내보낼 수 있습니다. 이러한 구조화되지 않은 콘텐츠로부터 Watson API를 통해 키워드, 엔터티, 감정(정서) 및 어조를 추출할 수 있습니다. 
 
-After data is enriched with Watson APIs, there are several different types of ways to analyze it. The Data Science Experience (DSX) provides a robust, yet flexible method of exploring the unstructured, enriched Facebook content.
+데이터가 Watson API로 풍부해 지면 이를 분석 할 수 있는 몇 가지 방법이 있습니다. Data Science Experience는 강력하면서도 유연한 Facebook 콘텐츠 탐색 방법을 제공합니다.
 
-This journey provides mock Facebook data, a notebook, and comes with several pre-built visualizations to jump start you with uncovering hidden insights.
+이 개발자 과정은 가상의 Facebook 데이터 및 쥬피터 노트북 환경 그리고, 숨겨진 통찰력을 발견하는 데 필요한 사전 준비된 시각화 툴이 제공됩니다.
 
-When the reader has completed this journey, they will understand how to:
+이 과정을 마치면 다음과 같은 것을 이해하게 될 것입니다 :
 
- * Read external data in to a DSX Jupyter notebook via DSX Object Storage and pandas DataFrames.
- * Use a Jupyter notebook and Watson APIs to enrich data unstructured data using:
+ * DSX Object Storage 및 pandas DataFrame을 통해 외부 데이터를 Jupyter Notebook으로 읽어 들입니다.
+ * Jupyter Notebook 및 왓슨 API를 사용하여 구조화되지 않은 데이터를 풍부하게 합니다 :
      * [Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html)
      * [Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html)
      * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html)
- * Write data from a pandas DataFrame in a DSX Jupyter notebook out to a file in DSX Object Storage.
- * Visualize and explore the enriched data with [PixieDust](https://github.com/ibm-cds-labs/pixiedust).
+ * DSX Jupyter 노트의 pandas DataFrame에서 DSX Object Storage의 파일로 데이터를 씁니다.
+ * [PixieDust](https://github.com/ibm-cds-labs/pixiedust)를 사용하여 데이터를 시각화하고 탐색할 수 있게 됩니다.
 
 ![](doc/source/images/architecture.png)
 
-## Flow
-1. A CSV file exported from Facebook Analytics is added to DSX Object Storage.
-2. Generated code makes the file accessible as a pandas DataFrame.
-3. The data is enriched with Natural Language Understanding.
-4. The data is enriched with Tone Analyzer.
-5. The data is enriched with Visual Recognition.
-6. The enriched data can be explored with PixieDust to uncover hidden insights and create graphics to highlight them.
+## 흐름도
+1. Facebook Analytics에서 내 보낸 CSV 파일이 DSX Object Storage에 추가됩니다.
+2. 생성 된 코드는 파일을 pandas DataFrame으로 액세스 할 수 있게 합니다.
+3. 데이터는 Watson Natural Language Understanding을 통해 추가 정보가 채워집니다.
+4. 데이터는 Watson Tone Analyzer를 통해 추가 정보가 채워집니다.
+5. 데이터는 Watson Visual Recognition를 통해 추가 정보가 채워집니다.
+6. 이렇게 가공된 데이터는 PixieDust를 통해, 숨겨진 인사이트를 발견하고 이를 강조하기 위해 그래프를 만들 수 있습니다.
 
 ## With Watson
 
-Want to take your Watson app to the next level? Looking to leverage Watson Brand assets? Join the [With Watson](https://www.ibm.com/watson/with-watson) program which provides exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
+Watson 응용 프로그램을 다음 단계로 가져 가고 싶습니까? Watson 브랜드 자산을 활용하고 싶습니까? Watson이 포함된 상용화 솔루션의 성공을 가속화하기 위해 독점적인 브랜드, 마케팅 및 기술 리소스를 제공 하는 [With Watson](https://www.ibm.com/watson/with-watson) 프로그램에 가입하십시오.
 
-# Included components
+# 구성 요소
 
 * [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 * [Bluemix Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): A Bluemix service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
@@ -50,7 +50,7 @@ Want to take your Watson app to the next level? Looking to leverage Watson Brand
 * [Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html): Uses linguistic analysis to detect communication tones in written text.
 * [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html): Understand image content.
 
-# Featured technologies
+# 주요 기술
 
 * [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
 * [PixieDust](https://github.com/ibm-cds-labs/pixiedust): PixieDust is an open source helper library that works as an add-on to Jupyter notebooks to improve the user experience of working with data.
@@ -61,14 +61,13 @@ Want to take your Watson app to the next level? Looking to leverage Watson Brand
 * [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
 * [Python](https://www.python.org/): Python is a programming language that lets you work more quickly and integrate your systems more effectively.
 
-# Watch the Video
+# 비디오 보기
 
 [![](http://img.youtube.com/vi/UIkjFo9o3vI/0.jpg)](https://www.youtube.com/watch?v=UIkjFo9o3vI)
 
-# Steps
+# 절차
 
-Follow these steps to setup and run this developer journey. The steps are
-described in detail below.
+이 개발자의 여행을 설정하고 실행하려면 다음 단계를 따르십시오. 단계는 아래에서 자세히 설명합니다.
 
 1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
 1. [Create the notebook](#2-create-the-notebook)
@@ -173,7 +172,7 @@ The inserted code includes a dictionary with credentials assigned to a variable
 with a name like `credentials_1`. It may have a different name (e.g. `credentials_2`).
 Rename it or reassign it if needed. The notebook code assumes it will be `credentials_1`.
 
-## 6. Run the notebook
+## 6. 노트북 
 
 When a notebook is executed, what is actually happening is that each code cell in
 the notebook is executed, in order, from top to bottom.
@@ -199,7 +198,7 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
-## 7. Analyze the results
+## 7. 결과 분석
 
 ### Part I - Enrich
 
@@ -254,9 +253,9 @@ The right combination will give you insights into the impact of
 your facebook posts. Once you uncover the insights, find the best
 presentation to convince others.
 
-## 8. Save your work
+## 8. 작업 저장
 
-### How to save your work:
+### 작업 저장 방법:
 
 Under the `File` menu, there are several ways to save your notebook:
 
@@ -266,14 +265,14 @@ Under the `File` menu, there are several ways to save your notebook:
   that contains a date and time stamp. Up to 10 versions of your notebook can be
   saved, each one retrievable by selecting the `Revert To Version` menu item.
 
-# Sample output
+# 샘플 결과
 
 The example output in data/examples has embedded JavaScript for
 PixieDust charts. View it via github pages: [here](https://ibm.github.io/pixiedust-facebook-analysis/data/examples/pixiedust_facebook_analysis.html)
 
 > Note: Some interactive functionality does not work in the HTML sample. Run the notebook for full functionality. To see the code and markdown cells without output, you can view [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb) with the github viewer.
 
-# Links
+# 링크
 
 For more information about PixieDust, check out the following:
 * PixieDust Documentation: https://ibm-cds-labs.github.io/pixiedust/index.html
@@ -282,6 +281,6 @@ For more information about PixieDust, check out the following:
 Visit the Watson Accelerators portal to see more live patterns in action:
 * Watson Accelerators: http://www.watsonaccelerators.com
 
-# License
+# 라이센스
 
 [Apache 2.0](LICENSE)
