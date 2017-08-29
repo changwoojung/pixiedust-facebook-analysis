@@ -44,11 +44,11 @@ Watson 애플리케이션의 다음 레벨로 넘어가고 싶으신가요? Wats
 
 # 구성 요소
 
-* [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
-* [Bluemix Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): A Bluemix service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
-* [Watson Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html): Natural language processing for advanced text analysis.
-* [Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html): Uses linguistic analysis to detect communication tones in written text.
-* [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html): Understand image content.
+* [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): RStudio, Jupyter, Python에 매니지드 Spark, 협업 환경 등의 부가 서비가 함께 제공되는 데이터 분석 환경
+* [Bluemix Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): 빠른 시장 진입과 고가용성 및 비용 효과적인 어플리케이션을 만들기 위한 클라우드 기반 비정형 데이터 저장 서비스.
+* [Watson Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html): 고급 텍스트 분석을 위한 자연어 처리.
+* [Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html): 텍스트의 대화 톤을 감지하기 위해 언어학적 분석을 활용합니다.
+* [Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html): 이미지 내용을 이해.
 
 # 주요 기술
 
