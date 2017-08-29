@@ -40,7 +40,7 @@ Facebook Analytics에서 내 보낸 데이터로 시작하여, Natural Language 
 
 ## With Watson
 
-Watson 응용 프로그램을 다음 단계로 가져 가고 싶습니까? Watson 브랜드 자산을 활용하고 싶습니까? Watson이 포함된 상용화 솔루션의 성공을 가속화하기 위해 독점적인 브랜드, 마케팅 및 기술 리소스를 제공 하는 [With Watson](https://www.ibm.com/watson/with-watson) 프로그램에 가입하십시오.
+Watson 애플리케이션의 다음 레벨로 넘어가고 싶으신가요? Watson 브랜드 자산을 활용하고 싶으신가요? 독점적 브랜드, 마케팅, 기술 리소스를 제공하는 [With Watson](https://www.ibm.com/watson/with-watson) 프로그램에 참여하시면 Watson을 활용한 여러분의 상용 솔루션의 가치를 높일 수 있습니다.
 
 # 구성 요소
 
@@ -52,14 +52,17 @@ Watson 응용 프로그램을 다음 단계로 가져 가고 싶습니까? Watso
 
 # 주요 기술
 
-* [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
-* [PixieDust](https://github.com/ibm-cds-labs/pixiedust): PixieDust is an open source helper library that works as an add-on to Jupyter notebooks to improve the user experience of working with data.
-* [pandas](http://pandas.pydata.org/): A Python library providing high-performance, easy-to-use data structures.
-* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/): Beautiful Soup is a Python library for pulling data out of HTML and XML files.
-* [Data Science](https://developer.ibm.com/code/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
-* [Cognitive](https://developer.ibm.com/watson/): Watson is a cognitive technology that can think like a human.
-* [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
-* [Python](https://www.python.org/): Python is a programming language that lets you work more quickly and integrate your systems more effectively.
+* [Jupyter Notebooks](http://jupyter.org/): 라이브 코드, 방정식, 시각화 및 설명 텍스트가 포함 된 문서를 만들고 공유 할 수 있는 오픈 소스 웹 응용 프로그램
+* [PixieDust](https://github.com/ibm-cds-labs/pixiedust): 데이터 작업 경험을 향상시키기 위해 Jupyter 노트북의 추가 기능으로 작동하는 오픈 소스 헬퍼 라이브러리
+* [pandas](http://pandas.pydata.org/): 고성능의 사용하기 쉬운 데이터 구조를 제공하는 Python 라이브러리
+
+* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/): HTML 및 XML 파일에서 데이터를 가져 오는 Python 라이브러리
+
+* [Data Science](https://developer.ibm.com/code/technologies/data-science/): 인사이트 추출을 위한 정형 데이터 및 비정형 데이터 분석 시스템 및 방법
+
+* [Cognitive](https://developer.ibm.com/watson/): 왓슨은 인간처럼 생각할 수 있는 인지 기술
+* [Analytics](https://developer.ibm.com/code/technologies/analytics/): 분석을 통한 기업의 데이터 가치 제공
+* [Python](https://www.python.org/): Python은 보다 신속하게 작업하고 시스템을 보다 효과적으로 통합 할 수 있게 해주는 프로그래밍 언어
 
 # 비디오 보기
 
@@ -69,39 +72,39 @@ Watson 응용 프로그램을 다음 단계로 가져 가고 싶습니까? Watso
 
 이 개발자의 여행을 설정하고 실행하려면 다음 단계를 따르십시오. 단계는 아래에서 자세히 설명합니다.
 
-1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
-1. [Create the notebook](#2-create-the-notebook)
-1. [Create Bluemix services](#3-create-bluemix-services)
-1. [Add credentials](#4-add-credentials)
-1. [Add the CSV file](#5-add-the-csv-file)
-1. [Run the notebook](#6-run-the-notebook)
-1. [Analyze the results](#7-analyze-the-results)
-1. [Save your work](#8-save-your-work)
+1. [Data Science Experience 가입하기](#1-data-science-experience-가입하기)
+1. [노트북 만들기](#2-노트북-만들기)
+1. [Bluemix 서비스 만들기](#3-bluemix-서비스-만들기)
+1. [자격 증명 추가](#4-자격-증명-추가)
+1. [CSV 파일 추가](#5-CSV-파일-추가)
+1. [노트북 실행하기](#6-노트북-실행하기)
+1. [결과 분석](#7-결과-분석)
+1. [작업 저장](#8-작업-저장)
 
-## 1. Sign up for the Data Science Experience
+## 1. Data Science Experience 가입하기
 
-Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your Bluemix account.
+IBM의 [Data Science Experience](http://datascience.ibm.com/)에 가입 하십시오. Data Science Experience (DSX) 에 가입함으로써, 두 서비스: ``DSX-Spark`` 및 ``DSX-ObjectStore`` 서비스가 Bluemix 계정에 생성됩니다.
 
-## 2. Create the notebook
+## 2. 노트북 만들기
 
-You can create the notebook in DSX using the URL of the notebook that is in this git repo (or similarly from a local file if you cloned the repo).
+이 git repo에 있는 노트북의 URL을 사용하여 DSX에서 노트북을 만들 수 있습니다. (또는 저장소를 복제 한 경우 로컬 파일로 부터 가능)
 
-1. Use the menu on the left to select `My Projects` and then `Default Project`.
-1. Click on `Add notebooks` (upper right) to create a notebook.
-1. Select the `From URL` tab.
-1. Enter a name for the notebook.
-1. Optionally, enter a description for the notebook.
-1. Enter this Notebook URL:
+1. 왼쪽에있는 메뉴를 사용하여, `My Projects` 선택 후 `Default Project` 선택합니다.
+1. `Add notebooks` (오른편 위쪽) 를 클릭하여, 노트북을 생성합니다.
+1. `From URL` 탭을 선택합니다.
+1. 노트북의 이름을 입력하십시오.
+1. 선택적으로, 노트북에 대한 설명을 입력하십시오.
+1. 아래의 노트북 URL를 입력하십시오:
     ```
     https://github.com/IBM/pixiedust-facebook-analysis/blob/master/notebooks/pixiedust_facebook_analysis.ipynb
     ```
-1. Click the `Create Notebook` button.
+1. `Create Notebook` 버튼을 클릭하십시오.
 
 ![](doc/source/images/create_notebook_from_url.png)
 
-## 3. Create Bluemix services
+## 3. Bluemix 서비스 만들기
 
-Create the following Bluemix services by clicking the `Deploy to Bluemix` button, or use these links to create the services in the Bluemix UI.
+`Deploy to Bluemix` 를 클릭하여 다음의 Bluemix 서비스들을 만들거나, 아래의 링크를 사용하여 Bluemix UI에서 서비스를 만듭니다.
 
   * [**Visual Recognition**](https://console.ng.bluemix.net/catalog/services/visual-recognition)
   * [**Natural Language Understanding**](https://console.ng.bluemix.net/catalog/services/natural-language-understanding)
@@ -109,43 +112,39 @@ Create the following Bluemix services by clicking the `Deploy to Bluemix` button
   
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/pixiedust-facebook-analysis)
 
-## 4. Add credentials
+## 4. 자격 증명 추가
 
-Find the notebook cell after `1.5. Add Service Credentials From Bluemix for Watson Services`.
+`1.5. Add Service Credentials From Bluemix for Watson Services` 다음에 있는 셀을 노트북에서 찾습니다.
 
-Replace the five <add_...> placeholder values with information from the `Service Credentials` tab in Bluemix. Use your Bluemix dashboard to find each of the services and click on the `Service Credentials` tab. In some cases, you might need to create credentials with the `New Credential` option.
+다섯 개의 <add _...> 라는 곳에 블루믹스 `Service Credentials` 의 탭에 있는 정보로 바꿉니다. Bluemix 대시 보드를 사용하여 각 서비스를 찾고 해당 `Service Credentials` 탭을 클릭 하십시오. 경우에 따라서는 `New Credential` 옵션을 사용하여 자격 증명을 만들어야 할 수 있습니다.
 
 ![](doc/source/images/add_credentials.png)
 
-> Note: This cell is marked as a `hidden_cell` because it will contain sensitive credentials.
+> Note: 이 셀은 중요한 자격 증명을 포함하기 때문에 `hidden_cell` 로 표시됩니다.
 
-## 5. Add the CSV file
+## 5. CSV 파일 추가
 
-#### Add the CSV file to the notebook
-Use `Find and Add Data` (look for the `10/01` icon)
-and its `Files` tab. From there you can click
-`browse` and add a .csv file from your computer.
+#### CSV 파일을 노트북에 추가하십시오.
+`Find and Add Data` (`10/01` 아이콘을 찾으십시오) 및 `Files` 탭을 사용하십시오.
+`browse`를 선택하여, 컴퓨터에 있는 .csv 파일을 추가하십시오.
 
 ![](doc/source/images/add_file.png)
 
-> Note:  If you don't have your own data, you can get our example by cloning
-this git repo. Look in the `data/example_input` directory.
+> Note:  나만의 데이터가 없으면 이 git repo 를 복제하여 예제 데이터를 얻을 수 있습니다. `data/example_input`에 위치합니다.
 
-#### Insert to code
-Find the notebook cell after `2.1 Load data from Object Storage`. Place your cursor after `# Insert pandas DataFrame`. Make sure this cell is selected before inserting code.
+#### 코드에 추가하기
+노트북에서 `2.1 Load data from Object Storage` 셀을 찾아, `# Insert pandas DataFrame` 뒤에 커서를 놓습니다. 코드를 삽입하기 전에 이 셀이 선택되어 있는지 확인하십시오.
 
-Using the file that you added above (under the 10/01 Files tab),
-use the `Insert to code` drop-down menu.
-Select `Insert Pandas DataFrame` from the drop-down menu.
+위에 추가 한 파일 (10/01 파일 탭 아래)을 사용하여(under the 10/01 Files tab),
+`Insert to code` 드롭 다운 메뉴에서 `Insert Pandas DataFrame` 를 선택합니다.
 
 ![](doc/source/images/insert_to_code.png)
 
-> Note: This cell is marked as a hidden_cell because it contains
-sensitive credentials.
+> Note: 이 셀에는 민감한 자격 증명이 포함되어 있기 때문에 hidden_cell 로 표시됩니다.
 
 ![](doc/source/images/inserted_pandas.png)
 
-#### Fix-up variable names
+#### 변수명 수정
 The inserted code includes a generated method with credentials and then calls
 the generated method to set a variable with a name like `df_data_1`. If you do
 additional inserts, the method can be re-used and the variable will change
@@ -165,120 +164,96 @@ Use the CSV file's drop-down menu again. This time select `Insert Credentials`.
 
 ![](doc/source/images/insert_file_credentials.png)
 
-Note: This cell is marked as a `hidden_cell` because it contains sensitive credentials.
+Note: 이 셀에는 민감한 자격 증명이 포함되어 있기 때문에 hidden_cell 로 표시됩니다.
 
-#### Fix-up variable names
-The inserted code includes a dictionary with credentials assigned to a variable
-with a name like `credentials_1`. It may have a different name (e.g. `credentials_2`).
-Rename it or reassign it if needed. The notebook code assumes it will be `credentials_1`.
+#### 변수명 수정
+추가된 코드에는 `credentials_1`와 유사한 이름의 변수에 자격 증명이 저장됩니다
+다른 이름 (예를 들어, `credentials_2`)일 수도 있으니, 필요에 따라 변경합니다. `credentials_1`를 가정하여 작성되어 있습니다.
 
-## 6. 노트북 
+## 6. 노트북 실행하기
 
-When a notebook is executed, what is actually happening is that each code cell in
-the notebook is executed, in order, from top to bottom.
+노트가 실행될 때 실제로 일어나는 것은 노트의 각 코드 셀이 위에서 아래로 순서대로 실행된다는 것입니다.
 
-Each code cell is selectable and is preceded by a tag in the left margin. The tag
-format is `In [x]:`. Depending on the state of the notebook, the `x` can be:
+각 코드 셀은 선택 가능하며 왼쪽 부분에 태그가 붙습니다. 태그 형식은 `In [x]:` 입니다. 노트북의 상태에 따라 `x` 값은 다음과 같습니다.:
 
-* A blank, this indicates that the cell has never been executed.
-* A number, this number represents the relative order this code step was executed.
-* A `*`, this indicates that the cell is currently executing.
+* 공백: 셀이 한 번도 실행되지 않았음을 나타냅니다.
+* 숫자: 해당 셀이 실행된 상대적인 순서를 나타냅니다.
+* `*`: 셀이 현재 실행 중임을 나타냅니다.
 
-There are several ways to execute the code cells in your notebook:
+노트북에서 코드 셀을 실행하는 데는 여러 가지 방법이 있습니다.:
 
-* One cell at a time.
-  * Select the cell, and then press the `Play` button in the toolbar.
-* Batch mode, in sequential order.
-  * From the `Cell` menu bar, there are several options available. For example, you
-    can `Run All` cells in your notebook, or you can `Run All Below`, that will
-    start executing from the first cell under the currently selected cell, and then
-    continue executing all cells that follow.
-* At a scheduled time.
-  * Press the `Schedule` button located in the top right section of your notebook
-    panel. Here you can schedule your notebook to be executed once at some future
-    time, or repeatedly at your specified interval.
+* 한 번에 하나의 셀 실행.
+  * 셀을 선택한 다음 툴바에서 `Play` 버튼을 누릅니다.
+* 배치모드: 순서대로 실행.
+  * `Cell` 메뉴 모음에 사용할 수 있는 몇 가지 옵션이 있습니다. 예를 들어, `Run All`을 통해 모든 셀을 모두 실행하거나, `Run All Below`을 통해 현재 셀 바로 아래 셀로 부터 가장 아래 마지막까지 계속 실행할 수 있습니다.
+* 스케쥴 기반
+  * 노트북 패널의 오른쪽 상단에 있는 `Schedule` 버튼을 누릅니다. 여기서 스케쥴 기반으로 한 번 또는 지정된 간격으로 반복적으로 노트북을 실행하도록 예약할 수 있습니다.
 
 ## 7. 결과 분석
 
-### Part I - Enrich
+### Part I - 데이터 풍부하게 하기
 
-If you walk through the cells, you will see that we demonstrated how to do the following in Part I:
+각각의 셀을 살펴보면, Part I에서 다음을 수행한다는 것을 알수 있습니다 :
 
-* Install external libraries from PyPI
-* Create clients to connect to Watson cognitive services
-* Load data from a local CSV file to a pandas DataFrame (via Object Storage)
-* Do some data manipulation with pandas
-* Use BeautifulSoup
-* Use Natural Language Understanding
-* Use Tone Analyzer
-* Use Visual Recognition
-* Save the enriched data in a CSV file in Object Storage
+* PyPI에서 외부 라이브러리 설치
+* Watson 인지 서비스에 연결하는 클라이언트 생성
+* 로컬 CSV 파일의 데이터를 (Object Storage를 통해) pandas DataFrame으로 로드
+* pandas로 데이터 조작하기
+* BeautifulSoup 사용하기
+* Natural Language Understanding 사용하기
+* Tone Analyzer 사용하기
+* Visual Recognition 사용하기
+* CSV 파일을 Object Storage에 저장하기
 
-### Part II - Data Preparation
+### Part II - 데이터 준비
 
-In Part II, we used pandas to create multiple DataFrames from our main enriched DataFrame. After slicing and dicing and cleaning, these new DataFrames are ready for PixieDust to use.
+Part II에서는 pandas를 사용하여 메인 DataFrame 으로 부터, 여러 개의 DataFrames를 만듭니다. 슬라이싱과 다이싱 및 클리닝 후에, 이 새로운 DataFrames는 PixieDust에 사용될 준비가 됩니다.
 
-### Part III - Analyze
+### Part III - 분석
 
-In Part III, we analyze the results by exploring and visualizing the metrics with PixieDust.
+Part III 에서는 PixieDust를 사용하여 여러 메트릭을 탐색하고 시각화하여 결과를 분석합니다.
 
-After all the prep work done earlier, you'll see that there is almost no code
-needed here (thanks to PixieDust). We just use one-liners like this:
+이전에 수행 한 모든 준비 작업이 끝나면 PixieDust 덕분에 별도의 코드가 거의 필요 없다는 것을 알 수 있습니다. 단지, 아래와 같은 한 줄 짜리 코드만 필요합니다 :
 ```python
 display(<data-frame>)
 ```
 
-You should also notice that we used ```display(tones)``` in two different
-cells, but the result was two different charts. How can that happen?
-Well, we used cell metadata to tell PixieDust how to display the data.
-Notice the `Edit Metadata` button on each cell. If you don't see it, use the menu
-`View > Cell Toolbar > Edit Metadata` to make it visible. If you look at
-the metadata for the first two charts, you'll see how we got a bar chart and a pie chart.
+```display(tones)```라는 것을 두 개의 다른 셀에서 사용했지만, 서로 다른 결과가 나옵니다. PixieDust에게 데이터를 표시하는 방법을 알려주기 위해 셀 메타 데이터를 사용했습니다. `Edit Metadata` 메뉴를 확인하십시오. 보이지 않으면, View > Cell Toolbar > Edit Metadata를 사용하여 표시되도록 설정하십시오. 처음 두 차트의 메타 데이터를 보면, 막대 차트와 원형 차트가 어떻게 표시되는지 알 수 있습니다.
 
-**PixieDust is interactive!** This is where we explore to find out what
-the enriched data will tell us.
+**PixieDust는 상호 반응형 (interactive)입니다!** 여러 조작을 통해 새로운 인사이트를 탐구할 수 있습니다.
 
-Use the `Options` button to change the chart settings. The first chart shows
-post consumption by the detected emotion in the article. Notice how changing
-the aggregation type from SUM to AVG gives you a very different conclusion.
-You can also change it to COUNT to see the frequency of each emotion, but when you do that the metric no longer matters.
+`Options` 버튼을 사용하여 차트 설정을 변경합니다. 첫 번째 차트는 게시물에서 감지된 감정에 의한 포스트 소비를 보여줍니다. 집계 유형을 SUM에서 AVG로 변경하여 다른 결론을 얻을 수도 있습니다. 각 감정의 빈도를 확인하려면 COUNT (으)로 변경할 수도 있습니다.
 
-Explore by trying the following:
-* Use social tone as the key instead of emotion tone (or both).
-* Try other metrics such as lifetime negative feedback from users. 
-* Try the different renderers.
-* Try different chart types (and a grid).
+다음을 시도해보십시오 :
+* 감정 톤 대신 키로 사회적 톤을 사용하십시오.(또는 둘 다)
+* 사용자에 대한 부정적인 피드백과 같은 다른 측정 항목을 시도하십시오.
+* 다른 렌더러를 사용해보십시오.
+* 다른 차트 유형 (및 표)을 사용해보십시오.
 
-The right combination will give you insights into the impact of
-your facebook posts. Once you uncover the insights, find the best
-presentation to convince others.
+여러 조합을 통해 페이스북 게시물의 영향도와 관련된 통찰력을 갖게 됩니다. 이를 통해 설득력 있는 최상의 프레젠테이션을 찾으십시오.
 
 ## 8. 작업 저장
 
 ### 작업 저장 방법:
 
-Under the `File` menu, there are several ways to save your notebook:
+`File` 메뉴에는, 노트북을 저장하는 몇 가지 방법이 있습니다 :
 
-* `Save` will simply save the current state of your notebook, without any version
-  information.
-* `Save Version` will save your current state of your notebook with a version tag
-  that contains a date and time stamp. Up to 10 versions of your notebook can be
-  saved, each one retrievable by selecting the `Revert To Version` menu item.
+* `Save` 버전 정보없이 노트북의 현재 상태를 저장합니다.
+* `Save Version` 은 날짜 및 시간 스탬프가 포함된 버전 태그로 노트북의 현재 상태를 저장합니다. 최대 10개의 버전으로 저장할 수 있으며 Revert To Version 메뉴 항목을 선택하여 되돌릴 수 있습니다.
 
 # 샘플 결과
 
-The example output in data/examples has embedded JavaScript for
-PixieDust charts. View it via github pages: [here](https://ibm.github.io/pixiedust-facebook-analysis/data/examples/pixiedust_facebook_analysis.html)
+data/examples의 결과 예제에는 PixieDust 차트 용 JavaScript가 내장되어 있습니다. github 페이지를 통해 살펴보십시오: [here](https://ibm.github.io/pixiedust-facebook-analysis/data/examples/pixiedust_facebook_analysis.html)
 
-> Note: Some interactive functionality does not work in the HTML sample. Run the notebook for full functionality. To see the code and markdown cells without output, you can view [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb) with the github viewer.
+> Note: HTML예제는 몇가지 인터렉티브한 기능이 동작하지 않습니다. 전체 기능을 사용하려면 노트북을 실행하십시오. 출력없이 코드 및 마크 다운 셀을 보려면 github 뷰어로 [notebooks/pixiedust_facebook_analysis.ipynb](notebooks/pixiedust_facebook_analysis.ipynb)를 볼 수 있습니다.
 
 # 링크
 
-For more information about PixieDust, check out the following:
-* PixieDust Documentation: https://ibm-cds-labs.github.io/pixiedust/index.html
+PixieDust에 대한 자세한 내용은 다음을 확인하십시오 :
+* PixieDust 문서: https://ibm-cds-labs.github.io/pixiedust/index.html
 * PixieDust GitHub Repo: https://github.com/ibm-cds-labs/pixiedust
 
-Visit the Watson Accelerators portal to see more live patterns in action:
+추가적인 코드 패턴을 확인하려면 Watson Accelerators 포털을 방문하십시오.
 * Watson Accelerators: http://www.watsonaccelerators.com
 
 # 라이센스
