@@ -118,7 +118,7 @@ IBM의 [Data Science Experience](http://datascience.ibm.com/)에 가입 하십�
 
 `1.5. Add Service Credentials From Bluemix for Watson Services` 다음에 있는 셀을 노트북에서 찾습니다.
 
-다섯 개의 <add _...> 라는 곳에 블루믹스 `Service Credentials` 의 탭에 있는 정보로 바꿉니다. Bluemix 대시 보드를 사용하여 각 서비스를 찾고 해당 `Service Credentials` 탭을 클릭 하십시오. 경우에 따라서는 `New Credential` 옵션을 사용하여 자격 증명을 만들어야 할 수 있습니다.
+다섯 개의 `<add _...>` 라는 곳을 블루믹스 `Service Credentials` 의 탭에 있는 정보로 바꿉니다. Bluemix 대시 보드를 사용하여 각 서비스를 찾고 해당 `Service Credentials` 탭을 클릭 하십시오. 경우에 따라서는 `New Credential` 옵션을 사용하여 자격 증명을 만들어야 할 수 있습니다.
 
 ![](doc/source/images/add_credentials.png)
 
