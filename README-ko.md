@@ -75,7 +75,7 @@ Watson 애플리케이션의 다음 레벨로 넘어가고 싶으신가요? Wats
 1. [Data Science Experience 가입하기](#1-data-science-experience-가입하기)
 1. [노트북 만들기](#2-노트북-만들기)
 1. [Bluemix 서비스 만들기](#3-bluemix-서비스-만들기)
-1. [자격 증명 추가](#4-자격-증명-추가)
+1. [신임 정보 추가](#4-신임-정보-추가)
 1. [CSV 파일 추가](#5-csv-파일-추가)
 1. [노트북 실행하기](#6-노트북-실행하기)
 1. [결과 분석](#7-결과-분석)
@@ -114,15 +114,15 @@ IBM의 [Data Science Experience](http://datascience.ibm.com/)에 가입 하십�
   
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/pixiedust-facebook-analysis)
 
-## 4. 자격 증명 추가
+## 4. 신임 정보 추가
 
 `1.5. Add Service Credentials From Bluemix for Watson Services` 다음에 있는 셀을 노트북에서 찾습니다.
 
-다섯 개의 `<add _...>` 라는 곳을 블루믹스 `Service Credentials` 의 탭에 있는 정보로 바꿉니다. Bluemix 대시 보드를 사용하여 각 서비스를 찾고 해당 `Service Credentials` 탭을 클릭 하십시오. 경우에 따라서는 `New Credential` 옵션을 사용하여 자격 증명을 만들어야 할 수 있습니다.
+다섯 개의 `<add _...>` 라는 곳을 블루믹스 `Service Credentials` 의 탭에 있는 정보로 바꿉니다. Bluemix 대시 보드를 사용하여 각 서비스를 찾고 해당 `Service Credentials` 탭을 클릭 하십시오. 경우에 따라서는 `New Credential` 옵션을 사용하여 신임 정보를 만들어야 할 수 있습니다.
 
 ![](doc/source/images/add_credentials.png)
 
-> Note: 이 셀은 중요한 자격 증명을 포함하기 때문에 `hidden_cell` 로 표시됩니다.
+> Note: 이 셀은 중요한 신임 정보를 포함하기 때문에 `hidden_cell` 로 표시됩니다.
 
 ## 5. CSV 파일 추가
 
@@ -142,7 +142,7 @@ IBM의 [Data Science Experience](http://datascience.ibm.com/)에 가입 하십�
 
 ![](doc/source/images/insert_to_code.png)
 
-> Note: 이 셀에는 민감한 자격 증명이 포함되어 있기 때문에 hidden_cell 로 표시됩니다.
+> Note: 이 셀에는 민감한 신임 정보가 포함되어 있기 때문에 hidden_cell 로 표시됩니다.
 
 ![](doc/source/images/inserted_pandas.png)
 
@@ -166,10 +166,10 @@ Use the CSV file's drop-down menu again. This time select `Insert Credentials`.
 
 ![](doc/source/images/insert_file_credentials.png)
 
-Note: 이 셀에는 민감한 자격 증명이 포함되어 있기 때문에 hidden_cell 로 표시됩니다.
+Note: 이 셀에는 민감한 신임 정보를 포함되어 있기 때문에 hidden_cell 로 표시됩니다.
 
 #### 변수명 수정
-추가된 코드에는 `credentials_1`와 유사한 이름의 변수에 자격 증명이 저장됩니다
+추가된 코드에는 `credentials_1`와 유사한 이름의 변수에 신임 정보가 저장됩니다
 다른 이름 (예를 들어, `credentials_2`)일 수도 있으니, 필요에 따라 변경합니다. `credentials_1`를 가정하여 작성되어 있습니다.
 
 ## 6. 노트북 실행하기
